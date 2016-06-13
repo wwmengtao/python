@@ -32,10 +32,12 @@ def insert(sqlite3Name):
 	# 提交事务:
 	conn.commit()
 	conn.close()
+
 def printResult(cursor,tag):
 	values = cursor.fetchall()# 获得查询结果集:
 	for v in values:
 		print tag,":",v
+
 def query(sqlite3Name):
 	conn = sqlite3.connect(sqlite3Name)
 	cursor = conn.cursor()
@@ -47,8 +49,28 @@ def query(sqlite3Name):
 	cursor.close()
 	conn.close()
 
+def modify(sqlite3Name):
+	conn = sqlite3.connect(sqlite3Name)
+	cursor = conn.cursor()
+	# 执行修改语句:
+	cursor.execute('update myTable set name="Smith_m" where id="2"')
+	conn.commit()
+	cursor.close()
+	conn.close()
+
+def delete(sqlite3Name):
+	conn = sqlite3.connect(sqlite3Name)
+	cursor = conn.cursor()
+	# 执行删除语句:
+	cursor.execute('delete from myTable where id = 3')
+	conn.commit()
+	cursor.close()
+	conn.close()
+
 if __name__ == '__main__':
 	sqlite3Name='sqlite3Test.db'
-	create(sqlite3Name)
-	insert(sqlite3Name)
-	query(sqlite3Name)
+	#create(sqlite3Name)
+	#insert(sqlite3Name)
+	#query(sqlite3Name)
+	#modify(sqlite3Name)
+	delete(sqlite3Name)

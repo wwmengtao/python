@@ -38,5 +38,9 @@ def parse_xml(filename):
         print ""#隔行分开不同的element元素
 
 if __name__ == "__main__":
-    #parse_xml(os.getcwd()+os.sep+"data.xml")#方法一、获取当前目录下的data.xml文件路径
-    parse_xml(os.path.join(os.getcwd(),"data.xml"))#方法二、获取当前目录下的data.xml文件路径
+
+    #下列有多种获取当前目录下的data.xml文件路径的方法
+    fileName=os.getcwd()+os.sep+"data.xml"
+    #fileName=os.path.join(os.getcwd(),"data.xml")
+    #fileName='E:/Bat_shell/Python/test/data.xml'#Windows或者Linux环境下，使用“/”作为目录分隔符最保险
+    parse_xml(fileName)

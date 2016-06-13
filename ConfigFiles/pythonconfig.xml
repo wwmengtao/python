@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <targetdir>/home/lixh11/workspace/trans_lib/miss</targetdir>
+    <outdir>/home/lixh11/workspace/trans_lib/out</outdir>
+    <importdir>/home/lixh11/workspace/trans_lib/reuse</importdir>
+<locales>en,ar,bg,cs,el,es-rUS,uk,pt-rPT,ur-rPK, th</locales>
+</config>

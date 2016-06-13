@@ -7,7 +7,7 @@ import shutil
 from lxml import etree
 
 
-resources = "字符串资源的路径"
+resources = "E:/Bat_shell/Python/translation"
 
 
 def get_miss_dir():

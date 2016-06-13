@@ -29,7 +29,7 @@ def path_has_values(root):
             for f in filenames:
                 abspath = os.path.join(dirpath, f)
                 if 'values' in abspath:
-                    items = dirpath.split('/')
+                    items = dirpath.split(os.sep)
                     abspath = '/'.join(items[:-2])
                     if abspath not in result:
                         result.append(abspath)
@@ -54,7 +54,7 @@ def get_src_paths(root):
 
 
 def get_lang(path):
-    splited_path = path.split("/")
+    splited_path = path.split(os.sep)
     for s in splited_path:
         if s.find("values") is 0:
             return s

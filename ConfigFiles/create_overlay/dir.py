@@ -24,7 +24,7 @@ def path_has_values(root):
             for f in filenames:
                 abspath = os.path.join(dirpath, f)
                 if 'values' in abspath:
-                    items = dirpath.split('/')
+                    items = dirpath.split(os.sep)
                     abspath = '/'.join(items[:-2])
                     if abspath not in result:
                         result.append(abspath)

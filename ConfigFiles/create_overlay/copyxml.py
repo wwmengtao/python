@@ -67,7 +67,7 @@ def move_res(f):
     plurals = root.find("plurals")
     if strings is not None or arrays is not None or plurals is not None:
         save_file = f.replace(src_path, dest_path)
-        temp_path_items = save_file.split("/")
+        temp_path_items = save_file.split(os.sep)
         save_path = "/".join(temp_path_items[:-1])
         print(save_path)
         if not os.path.exists(save_path):

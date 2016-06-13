@@ -19,6 +19,7 @@ def node_text2(node):
         result = result + text  
     return result  
 
+#parse_xml:将xml中内容完整打印出来
 def parse_xml(filename):
     tree = etree.parse(filename)#将xml解析为树结构  
     root = tree.getroot()#获得该树的树根 
@@ -37,10 +38,22 @@ def parse_xml(filename):
         print "key:",key
         print ""#隔行分开不同的element元素
 
+#parse_xml2：解析xml文件中特定节点信息
+def parse_xml2(filename):
+    tree = etree.parse(filename)#将xml解析为树结构  
+    root = tree.getroot()#获得该树的树根 
+    elements_root = root.findall("article")
+    for s in elements_root:
+        item_date = s.attrib.get("mdate")#或者s.get("mdate")
+        item_key = s.get("key")
+        print "item_date:",item_date
+        print "item_key:",item_key
+
 if __name__ == "__main__":
 
     #下列有多种获取当前目录下的data.xml文件路径的方法
     fileName=os.getcwd()+os.sep+"data.xml"
     #fileName=os.path.join(os.getcwd(),"data.xml")
     #fileName='E:/Bat_shell/Python/test/data.xml'#Windows或者Linux环境下，使用“/”作为目录分隔符最保险
-    parse_xml(fileName)
+    #parse_xml(fileName)
+    parse_xml2(fileName)

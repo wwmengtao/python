@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<string name="view_authority_detail">কর্তৃপক্ষের বিবরণ দেখুন</string>
+<string name="authority_management">কর্তৃপক্ষের ব্যবস্থাপনা</string>
+<string name="authority_management_summary">গোপনীয়তা সন্দর্ভে কর্তৃপক্ষের ব্যবস্থাপনা, নিরাপত্তা, ইত্যাদি.</string>
+<string name="searchview_description_for_app">অ্যাপের অনুসন্ধান</string>
+</resources>

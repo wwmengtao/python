@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<string-array name="sim_slot">
+        <item>(tidak ditentukan)</item>
+        <item>Slot Sim 1</item>
+        <item>Slot Sim 2</item>
+    </string-array>
+<string-array name="wifi_WEP_security_type">
+        <item>Auto</item>
+        <item>ASCII WEP</item>
+        <item>Perenambelasan WEP</item>
+    </string-array>
+<string-array name="wifi_hotspot_disable_policy_entries">
+        <item>Sentiasa</item>
+        <item>Matikan apabila melahu selama 5 min</item>
+        <item>Matikan apabila melahu selama 10 min</item>
+    </string-array>
+<string-array name="wifi_ap_wps_mode_entries">
+        <item>"Butang"</item>
+        <item>"PIN diperoleh dari peranti rakan"</item>
+    </string-array>
+<string-array name="wifi_ap_max_connection_entries">
+        <item>1 pengguna</item>
+        <item>2 pengguna</item>
+        <item>3 pengguna</item>
+        <item>4 pengguna</item>
+        <item>5 pengguna</item>
+        <item>6 pengguna</item>
+        <item>7 pengguna</item>
+        <item>8 pengguna</item>
+    </string-array>
+<string-array name="wfd_720p_resolution_entry">
+        <item>720p (60 bingkai/saat)</item>
+        <item>﻿720p (30 bingkai/saat)</item>
+    </string-array>
+<string-array name="wfd_1080p_resolution_entry">
+        <item>1080p (30 bingkai/saat)</item>
+        <item>720p (60 bingkai/saat)</item>
+        <item>720p (30 bingkai/saat)</item>
+    </string-array>
+<string-array name="wfd_resolution_entry">
+        <item>﻿1080p FHD (Untuk video)</item>
+        <item>720p HD (Untuk permainan)</item>
+    </string-array>
+<string-array name="mouse_primary_button_titles">
+        <item>Tetikus tangan kanan</item>
+        <item>Tetikus tangan kiri</item>
+    </string-array>
+<string-array name="auto_time_entries">
+    	
+    	
+    	
+    <item>Gunakan masa yang disediakan oleh rangkaian</item>
+        <item>Gunakan masa yang disediakan oleh GPS</item>
+        <item>Mati</item>
+    </string-array>
+<string-array name="wifi_status_with_ssid">
+    <item msgid="7714855332363650812"/>
+    <item msgid="8878186979715711006">"Mengimbas..."</item>
+    <item msgid="355508996603873860">"Menyambung kepada <xliff:g id="NETWORK_NAME">%1$s</xliff:g>..."</item>
+    <item msgid="554971459996405634">"Mengesahkan dengan <xliff:g id="NETWORK_NAME">%1$s</xliff:g>..."</item>
+    <item msgid="7928343808033020343">"Mendapatkan alamat IP dari <xliff:g id="NETWORK_NAME">%1$s</xliff:g>..."</item>
+    <item msgid="8937994881315223448">"Disambungkan kepada <xliff:g id="NETWORK_NAME">%1$s</xliff:g>"</item>
+    <item msgid="1330262655415760617">"Digantung"</item>
+    <item msgid="7698638434317271902">"Memutuskan sambungan dari <xliff:g id="NETWORK_NAME">%1$s</xliff:g>..."</item>
+    <item msgid="197508606402264311">"Diputuskan sambungan"</item>
+    <item msgid="8578370891960825148">"Tidak berjaya"</item>
+    <item msgid="5660739516542454527">"Disekat"</item>
+    <item msgid="1805837518286731242">"Mengelakkan sambungan lemah buat sementara"</item>
+  </string-array>
+<string-array name="ram_states">
+    <item msgid="7088762389498381203">"biasa"</item>
+    <item msgid="4517779899383204000">"sederhana"</item>
+    <item msgid="406385694840950802">"rendah"</item>
+    <item msgid="4212263919458209842">"kritikal"</item>
+  </string-array>
+<string-array name="wifi_ip_settings">
+    <item msgid="3906714200993111074">"DHCP"</item>
+    <item msgid="628395202971532382">"Statik"</item>
+  </string-array>
+<string-array name="wifi_eap_method">
+        <!-- Do not translate. -->
+        
+        <!-- Do not translate. -->
+        
+        <!-- Do not translate. -->
+        
+        <!-- Do not translate. -->
+        <!-- <item>PWD</item>-->
+    <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+    </string-array>
+<string-array name="apn_auth_entries">
+    <item msgid="3856896061242872146">"Tiada"</item>
+    <item msgid="5756844015743664882">"PAP"</item>
+    <item msgid="535934025797984365">"CHAP"</item>
+    <item msgid="8383098660619805783">"PAP atau CHAP"</item>
+  </string-array>
+<string-array name="lock_after_timeout_entries">
+    <item msgid="8929270399652145290">"Serta-merta"</item>
+    <item msgid="6736512735606834431">"5 saat"</item>
+    <item msgid="8044619388267891375">"15 saat"</item>
+    <item msgid="1822002388249545488">"30 saat"</item>
+    <item msgid="8538071621211916519">"1 minit"</item>
+    <item msgid="5663439580228932882">"2 minit"</item>
+    <item msgid="49888496216106852">"5 minit"</item>
+    <item msgid="9002737361305019353">"10 minit"</item>
+    <item msgid="4322676235684793329">"30 minit"</item>
+  </string-array>
+<string-array name="wifi_phase2_entries">
+    <item msgid="1818786254010764570">"Tiada"</item>
+    <item msgid="6189918678874123056">"PAP"</item>
+    <item msgid="1524112260493662517">"MSCHAP"</item>
+    <item msgid="5923246669412752932">"MSCHAPV2"</item>
+    <item msgid="8651992560135239389">"GTC"</item>
+  </string-array>
+<string-array name="captioning_opacity_selector_titles">
+    <item msgid="7622491218136667566">"25%"</item>
+    <item msgid="2367156416247936773">"50%"</item>
+    <item msgid="5395560410107149298">"75%"</item>
+    <item msgid="8342334626783983353">"100%"</item>
+  </string-array>
+<string-array name="vpn_states">
+    <item msgid="8621078286418985762">"Diputuskan sambungan"</item>
+    <item msgid="6692305604213080515">"Memulakan..."</item>
+    <item msgid="8001704909356800092">"Menyambung..."</item>
+    <item msgid="4039737283841672166">"Disambungkan"</item>
+    <item msgid="4042143101664725090">"Tamat masa"</item>
+    <item msgid="7664124146786465092">"Tidak berjaya"</item>
+  </string-array>
+<string-array name="mvno_type_entries">
+    <item msgid="4367119357633573465">"Tiada"</item>
+    <item msgid="6062567900587138000">"SPN"</item>
+    <item msgid="2454085083342423481">"IMSI"</item>
+    <item msgid="2681427309183221543">"GID"</item>
+  </string-array>
+
+<string-array name="overlay_display_devices_entries">
+    <item msgid="1606809880904982133">"Tiada"</item>
+    <item msgid="688482401508173818">"720x480 mdpi"</item>
+    <item msgid="6027541158956821790">"720x480 mdpi (selamat)"</item>
+    <item msgid="8181151155909301030">"1280x720 tvdpi"</item>
+    <item msgid="2920655562462493148">"1280x720 tvdpi (selamat)"</item>
+    <item msgid="8910371271391940941">"1920x1080 xhdpi"</item>
+    <item msgid="4171600481380800455">"1920x1080 xhdpi (selamat)"</item>
+    <item msgid="1937752114395156918">"1280x720 tvdpi dan 1920x1080 xhdpi"</item>
+  </string-array>
+<string-array name="app_install_location_entries">
+    <item msgid="8151497958991952759">"Storan dalaman peranti"</item>
+    <item msgid="3738430123799803530">"Kad SD boleh tanggal"</item>
+    <item msgid="4498124044785815005">"Biar sistem menentukan"</item>
+  </string-array>
+
+<string-array name="app_ops_categories">
+    <item msgid="6358963769537892925">"Lokasi"</item>
+    <item msgid="255608127647030286">"Peribadi"</item>
+    <item msgid="4588829735729884491">"Pemesejan"</item>
+    <item msgid="886742181977884584">"Media"</item>
+    <item msgid="7924928667052300589">"Peranti"</item>
+  </string-array>
+<string-array name="wifi_status">
+    <item msgid="1922181315419294640"/>
+    <item msgid="8934131797783724664">"Mengimbas..."</item>
+    <item msgid="8513729475867537913">"Menyambung..."</item>
+    <item msgid="515055375277271756">"Mengesahkan..."</item>
+    <item msgid="1943354004029184381">"Mendapatkan alamat IP..."</item>
+    <item msgid="4221763391123233270">"Disambungkan"</item>
+    <item msgid="624838831631122137">"Digantung"</item>
+    <item msgid="7979680559596111948">"Memutuskan sambungan..."</item>
+    <item msgid="1634960474403853625">"Diputuskan sambungan"</item>
+    <item msgid="746097431216080650">"Tidak berjaya"</item>
+    <item msgid="6367044185730295334">"Disekat"</item>
+    <item msgid="503942654197908005">"Mengelakkan sambungan lemah buat sementara"</item>
+  </string-array>
+<string-array name="wifi_signal">
+    <item msgid="2245412278046491293">"Lemah"</item>
+    <item>"Agak Lemah"</item>
+    <item msgid="5615082285463430971">"Sederhana"</item>
+    <item msgid="3565079809875324621">"Baik"</item>
+    <item msgid="5702329417707689835">"Sangat baik"</item>
+  </string-array>
+<string-array name="bluetooth_visibility_timeout_entries">
+    <item msgid="8151962652413645395">"2 minit"</item>
+    <item msgid="8675215713017289017">"5 minit"</item>
+    <item msgid="477015974247590543">"1 jam"</item>
+    <item msgid="5198271470953124739">"Jangan sekali-kali tamat masa"</item>
+  </string-array>
+<string-array name="debug_hw_overdraw_entries">
+    <item msgid="8190572633763871652">"Mati"</item>
+    <item msgid="7688197031296835369">"Tunjukkan kawasan lebih lukis"</item>
+    <item msgid="2290859360633824369">"Tunjukkan kawasan untuk Deuteranomaly"</item>
+  </string-array>
+<string-array name="hdcp_checking_summaries">
+    <item msgid="505558545611516707">"Jangan sekali-kali gunakan penyemakan HDCP"</item>
+    <item msgid="3878793616631049349">"Gunakan penyemakan HDCP untuk kandungan DRM sahaja"</item>
+    <item msgid="45075631231212732">"Sentiasa gunakan penyemakan HDCP"</item>
+  </string-array>
+<string-array name="apn_protocol_entries">
+    <item msgid="4852355456199302715">"IPv4"</item>
+    <item msgid="4394161344888484571">"IPv6"</item>
+    <item msgid="8084938354605535381">"IPv4/IPv6"</item>
+  </string-array>
+<string-array name="captioning_font_size_selector_titles">
+    <item msgid="4800919809575254054">"Sangat kecil"</item>
+    <item msgid="6781094565687692782">"Kecil"</item>
+    <item msgid="8222123259497646551">"Biasa"</item>
+    <item msgid="5813217276778560466">"Besar"</item>
+    <item msgid="9044232017390975191">"Sangat besar"</item>
+  </string-array>
+<string-array name="wifi_eap_entries">
+    <item msgid="8615575908717909498">"PEAP"</item>
+    <item msgid="8667872640594311615">"TLS"</item>
+    <item msgid="7182812872984827322">"TTLS"</item>
+    <item msgid="2318274046749286642">"PWD"</item>
+  </string-array>
+<string-array name="screen_timeout_entries">
+    <item msgid="3342301044271143016">"15 saat"</item>
+    <item msgid="8881760709354815449">"30 saat"</item>
+    <item msgid="7589406073232279088">"1 minit"</item>
+    <item msgid="7001195990902244174">"2 minit"</item>
+    <item msgid="7489864775127957179">"5 minit"</item>
+    <item msgid="2314124409517439288">"10 minit"</item>
+    <item msgid="6864027152847611413">"30 minit"</item>
+  </string-array>
+<string-array name="window_animation_scale_entries">
+    <item msgid="8134156599370824081">"Animasi dimatikan"</item>
+    <item msgid="6624864048416710414">"Skala animasi .5x"</item>
+    <item msgid="2219332261255416635">"Skala animasi 1x"</item>
+    <item msgid="3544428804137048509">"Skala animasi 1.5x"</item>
+    <item msgid="3110710404225974514">"Skala animasi 2x"</item>
+    <item msgid="4402738611528318731">"Skala animasi 5x"</item>
+    <item msgid="6189539267968330656">"Skala animasi 10x"</item>
+  </string-array>
+<string-array name="wifi_peap_phase2_entries">
+    <item msgid="2577747762745812488">"Tiada"</item>
+    <item msgid="937786527870979616">"MSCHAPV2"</item>
+    <item msgid="5302613883318643629">"GTC"</item>
+  </string-array>
+<string-array name="security_settings_premium_sms_values">
+    <item msgid="7389829271787670252">"Tanya"</item>
+    <item msgid="5077768429488260031">"Jangan benarkan"</item>
+    <item msgid="1417929597727989746">"Sentiasa benarkan"</item>
+  </string-array>
+<string-array name="app_process_limit_entries">
+    <item msgid="3401625457385943795">"Had standard"</item>
+    <item msgid="4071574792028999443">"Tiada proses latar belakang"</item>
+    <item msgid="4810006996171705398">"Paling banyak 1 proses"</item>
+    <item msgid="8586370216857360863">"Paling banyak 2 proses"</item>
+    <item msgid="836593137872605381">"Paling banyak 3 proses"</item>
+    <item msgid="7899496259191969307">"Paling banyak 4 proses"</item>
+  </string-array>
+<string-array name="vpn_types_long">
+    <item msgid="2732002039459078847">"VPN PPTP"</item>
+    <item msgid="3799752201662127867">"VPN L2TP/IPSec dengan kunci prakongsi"</item>
+    <item msgid="4725504331295252103">"VPN L2TP/IPSec dengan sijil"</item>
+    <item msgid="7526551163264034377">"VPN IPSec dengan kunci prakongsi dan pengesahan Xauth"</item>
+    <item msgid="8064740940687465039">"VPN IPSec dengan sijil dan pengesahan Xauth"</item>
+    <item msgid="4946199982372391490">"VPN IPSec dengan sijil dan pengesahan hibrid"</item>
+  </string-array>
+<string-array name="usage_stats_display_order_types">
+    <item msgid="2100172576767439288">"Masa penggunaan"</item>
+    <item msgid="3703676222230317933">"Lancarkan kiraan"</item>
+    <item msgid="2502754479975776899">"Nama aplikasi"</item>
+  </string-array>
+<string-array name="wifi_proxy_settings">
+    <item msgid="4473276491748503377">"Tiada"</item>
+    <item msgid="8673874894887358090">"Manual"</item>
+    <item msgid="168893341855953140">"Auto Konfigurasi Proksi"</item>
+  </string-array>
+<string-array name="tts_pitch_entries">
+    <item msgid="7526050907652687351">"Sangat rendah"</item>
+    <item msgid="2692137425242433765">"Rendah"</item>
+    <item msgid="3332408460740717754">"Biasa"</item>
+    <item msgid="4907380534957572531">"Tinggi"</item>
+    <item msgid="4699640516390840297">"Sangat tinggi"</item>
+  </string-array>
+<string-array name="hdcp_checking_titles">
+    <item msgid="441827799230089869">"Jangan sekali-kali semak"</item>
+    <item msgid="6042769699089883931">"Semak kandungan DRM sahaja"</item>
+    <item msgid="9174900380056846820">"Sentiasa semak"</item>
+  </string-array>
+<string-array name="wifi_frequency_band_entries">
+    <item msgid="624340809384223320">"Auto"</item>
+    <item msgid="6670588712989942178">"5 GHz sahaja"</item>
+    <item msgid="2715516524973207876">"2.4 GHz sahaja"</item>
+  </string-array>
+<string-array name="wifi_sleep_policy_entries_wifi_only">
+    <item msgid="2124319326282651391">"Sentiasa"</item>
+    <item msgid="7433294150916905997">"Hanya apabila dipasang"</item>
+    <item msgid="1390404486722375028">"Jangan sekali-kali"</item>
+  </string-array>
+<string-array name="entries_font_size">
+    <item msgid="8166647333858618801">"Kecil"</item>
+    <item msgid="1932071435506638315">"Normal"</item>
+    <item msgid="38373998008112077">"Besar"</item>
+    <item msgid="7786168277516233536">"Sangat besar"</item>
+  </string-array>
+<string-array name="animator_duration_scale_entries">
+    <item msgid="6039901060648228241">"Animasi dimatikan"</item>
+    <item msgid="1138649021950863198">"Skala animasi .5x"</item>
+    <item msgid="4394388961370833040">"Skala animasi 1x"</item>
+    <item msgid="8125427921655194973">"Skala animasi 1.5x"</item>
+    <item msgid="3334024790739189573">"Skala animasi 2x"</item>
+    <item msgid="3170120558236848008">"Skala animasi 5x"</item>
+    <item msgid="1069584980746680398">"Skala animasi 10x"</item>
+  </string-array>
+<string-array name="long_press_timeout_selector_titles">
+    <item msgid="3511504869290423954">"Pendek"</item>
+    <item msgid="2560532955514699713">"Sederhana"</item>
+    <item msgid="2372711992605524591">"Panjang"</item>
+  </string-array>
+<string-array name="dream_timeout_entries">
+    <item msgid="3149294732238283185">"Jangan sekali-kali"</item>
+    <item msgid="2194151041885903260">"15 saat"</item>
+    <item msgid="5892295237131074341">"30 saat"</item>
+    <item msgid="3538441365970038213">"1 minit"</item>
+    <item msgid="412343871668955639">"2 minit"</item>
+    <item msgid="5076853889688991690">"5 minit"</item>
+    <item msgid="1903860996174927898">"10 minit"</item>
+    <item msgid="6415509612413178727">"30 minit"</item>
+  </string-array>
+<string-array name="bearer_entries">
+    <item msgid="1770285336669531300">"LTE"</item>
+    <item msgid="3044323519470167625">"eHRPD"</item>
+    <item msgid="6848428671997893147">"Tidak ditentukan"</item>
+  </string-array>
+<string-array name="enable_opengl_traces_entries">
+    <item msgid="3191973083884253830">"Tiada"</item>
+    <item msgid="9089630089455370183">"Logcat"</item>
+    <item msgid="5397807424362304288">"Systrace (Grafik)"</item>
+    <item msgid="1340692776955662664">"Tindanan panggilan pada glGetError"</item>
+  </string-array>
+<string-array name="tts_rate_entries">
+    <item msgid="6041212618892492920">"Sangat perlahan"</item>
+    <item msgid="2361722960903353554">"Perlahan"</item>
+    <item msgid="1145554631248513562">"Biasa"</item>
+    <item msgid="7553665153391107454">"Laju"</item>
+    <item msgid="1370673569131070146">"Lebih cepat"</item>
+    <item msgid="4648206845228970803">"Sangat cepat"</item>
+    <item msgid="4977949754169483251">"Cepat"</item>
+    <item msgid="6106302964845503577">"Sangat cepat"</item>
+    <item msgid="6800277205640837264">"Terpantas"</item>
+  </string-array>
+<string-array name="transition_animation_scale_entries">
+    <item msgid="8464255836173039442">"Animasi dimatikan"</item>
+    <item msgid="3375781541913316411">"Skala animasi .5x"</item>
+    <item msgid="1991041427801869945">"Skala animasi 1x"</item>
+    <item msgid="4012689927622382874">"Skala animasi 1.5x"</item>
+    <item msgid="3289156759925947169">"Skala animasi 2x"</item>
+    <item msgid="7705857441213621835">"Skala animasi 5x"</item>
+    <item msgid="6660750935954853365">"Skala animasi 10x"</item>
+  </string-array>
+<string-array name="wifi_p2p_status">
+    <item msgid="1701505390737218306">"Bersambung"</item>
+    <item msgid="3189211552661432651">"Dijemput"</item>
+    <item msgid="3206450250360237549">"Tidak berjaya"</item>
+    <item msgid="7785896708926971207">"Ada"</item>
+    <item msgid="2330782789550628803">"Di luar liputan"</item>
+  </string-array>
+
+<string-array name="show_non_rect_clip_entries">
+    <item msgid="993742912147090253">"Mati"</item>
+    <item msgid="675719912558941285">"Lukis kawasan keratan bukan segi empat tepat berwarna biru"</item>
+    <item msgid="1064373276095698656">"Serlahkan perintah lukisan berwarna hijau yang diuji"</item>
+  </string-array>
+
+<string-array name="timezone_filters">
+    <item msgid="5296756001147094692">"Amerika"</item>
+    <item msgid="3005562397632768392">"Eropah"</item>
+    <item msgid="5696915123093701218">"Afrika"</item>
+    <item msgid="4439789052790868249">"Asia"</item>
+    <item msgid="956915953069815961">"Australia"</item>
+    <item msgid="5345178126174698955">"Pasifik"</item>
+    <item msgid="8392017019801393511">"Semua"</item>
+  </string-array>
+<string-array name="wifi_p2p_wps_setup">
+    <item msgid="5085064298144493867">"Butang tekan"</item>
+    <item msgid="1624323946324499595">"PIN daripada peranti rakan"</item>
+    <item msgid="5366790421523328066">"PIN dari peranti ini"</item>
+  </string-array>
+<string-array name="wifi_sleep_policy_entries">
+    <item msgid="3269131034472904310">"Sentiasa"</item>
+    <item msgid="844721238536786870">"Hanya apabila dipalamkan"</item>
+    <item msgid="2990218920631468642">"Jangan sekali-kali (menaikkan penggunaan data)"</item>
+  </string-array>
+
+
+<string-array name="select_logd_size_lowram_titles">
+    <item msgid="524799395770610154">"64K"</item>
+    <item msgid="3534782711045262344">"256K"</item>
+    <item msgid="8085867209202153403">"1M"</item>
+  </string-array>
+<string-array name="proc_stats_process_states">
+    <item msgid="5069825997142785829">"Berterusan"</item>
+    <item msgid="5779398140277006695">"Aktiviti popular"</item>
+    <item msgid="1439598363694578255">"Penting (latar depan)"</item>
+    <item msgid="3396458970745718652">"Penting (latar belakang)"</item>
+    <item msgid="5214825238247511992">"Sandaran"</item>
+    <item msgid="311372689168254967">"Berat"</item>
+    <item msgid="7438189122367820362">"Perkhidmatan (berjalan)"</item>
+    <item msgid="918687422516982498">"Perkhidmatan (bermula semula)"</item>
+    <item msgid="6807727069641853029">"Penerima"</item>
+    <item msgid="6782857406100845127">"Laman Utama"</item>
+    <item msgid="2860945127596974299">"Aktiviti terakhir"</item>
+    <item msgid="8610560843693675830">"Cache (aktiviti)"</item>
+    <item msgid="4338089220026248848">"Cache (klien aktiviti)"</item>
+    <item msgid="6652164677254579050">"Cache (kosong)"</item>
+  </string-array>
+<string-array name="sim_card_data_range">
+    <item msgid="676666889014650266">"4 digit terakhir"</item>
+    <item msgid="7841762954785375718">"4 digit pertama"</item>
+  </string-array>
+<string-array name="select_logd_size_titles">
+    <item msgid="3100534874529240291">"64K"</item>
+    <item msgid="505611754508988476">"256K"</item>
+    <item msgid="6361286924268716397">"1M"</item>
+    <item msgid="6405203239560695266">"4M"</item>
+    <item msgid="3025431211013424097">"16M"</item>
+  </string-array>
+<string-array name="select_logd_size_summaries">
+    <item msgid="7346595473588765019">"64K per pnimbal log"</item>
+    <item msgid="2822309747675758628">"256K per pnmbal log"</item>
+    <item msgid="6699306198357496731">"1M per penimbal log"</item>
+    <item msgid="5748528643937500349">"4M per penimbal log"</item>
+    <item msgid="1978629051085111592">"16M per pnimbal log"</item>
+  </string-array>
+<string-array name="entryvalues_smart_rotation">
+        <item>0</item>
+        
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+<string-array name="data_usage_data_range">
+    <item msgid="5013973108901348144">"30 hari terakhir"</item>
+    <item msgid="6600989128423965319">"Ttpkn kitar penggunaan..."</item>
+  </string-array>
+<string-array name="multi_sim_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+<string-array name="entries_zen_mode">
+    <item msgid="816404936744485190">"Mati"</item>
+    <item msgid="5656544177755411222">"Gangguan terhad"</item>
+    <item msgid="8735337502532332056">"Gangguan sifar"</item>
+  </string-array>
+<string-array name="multi_sim_values_voice">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+<string-array name="wifi_sleep_policy_values_smart">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+        <item>3</item>
+    </string-array>
+<string-array name="proc_stats_memory_states">
+    <item msgid="8845855295876909468">"Biasa"</item>
+    <item msgid="866544120205026771">"Sederhana"</item>
+    <item msgid="7851902244436886890">"Rendah"</item>
+    <item msgid="3022922196817563960">"Kritikal"</item>
+  </string-array>
+<string-array name="entries_smart_rotation">
+        <item>Skrin Putaran Pintar（putar skrin seperti mata anda）</item>
+        <item>Skrin putar auto</item>
+        <item>Ditutup</item>
+    </string-array>
+<string-array name="tethered_ipv6_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+<string-array name="agps_apn_entries">
+        <item>"CMWAP"</item>
+        <item>"CMNET"</item>
+    </string-array>
+<string-array name="agps_apn_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+<string-array name="usb_tether_type_values">
+
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>1</item>
+    </string-array>
+<string-array name="usb_tether_type_entries">
+
+        <!-- Do not translate. -->
+        <item>Windows(RNDIS)</item>
+        <!-- Do not translate. -->
+        <item>Linux(EEM)</item>
+    </string-array>
+<string-array name="agps_si_mode_entries">
+        <item>"MSB"</item>
+        <item>"MSA"</item>
+    </string-array>
+<string-array name="agps_reset_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+<string-array name="emergency_tone_entries">
+    <item msgid="5165439859689033665">"Matikan"</item>
+    <item msgid="3165868966179561687">"Awasan"</item>
+    <item msgid="6038758039030476855">"Getar"</item>
+  </string-array>
+<string-array name="agps_reset_type_entries">
+        <item>"PANAS"</item>
+        <item>"HANGAT"</item>
+        <item>"SEJUK"</item>
+    </string-array>
+<string-array name="agps_network_entries">
+        <item>"Hanya Rumah"</item>
+        <item>"Rumah + Perayauan"</item>
+    </string-array>
+<string-array name="wifi_eap_method_sim_aka">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+        <item>SIM</item>
+        <item>AKA</item>
+    </string-array>
+<string-array name="entries_button_brightness">
+        <item>Hidup</item>
+        <item>Selama 3 saat</item>
+        <item>Kawalan Pintar</item>
+        <item>Mati</item>
+    </string-array>
+
+<string-array name="wpa_security">
+        <item>"Buka"</item>  
+        <item>WEP</item>
+        <item>WPA/WPA2 PSK</item>
+        <item>802.1x EAP</item>
+    </string-array>
+<string-array name="softspacename">
+        
+        
+        
+    <item>Pengesyoran sistem</item>
+        <item>Pasang pada telefon</item>
+        <item>Pasang pada kad memori lalai</item>
+    </string-array>
+<string-array name="entryvalues_smart_rotation_nocamera">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+<string-array name="mouse_primary_button_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+<string-array name="origin_sim_names" translateable="false">
+        <item>SIM 1</item>
+        <item>SIM 2</item>
+    </string-array>
+<string-array name="tethered_ipv6_entries">
+        <item>IPv4</item>
+        <item>IPv4 &amp; IPv6</item>
+    </string-array>
+<string-array name="multi_sim_entries_voice">
+        <item>Langganan 1</item>
+        <item>Langganan 2</item>
+        <item>Gesa</item>
+    </string-array>
+<string-array name="wifi_hotspot_disable_policy_values">
+
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>1</item>
+        <!-- Do not translate. -->
+        <item>2</item>
+    </string-array>
+<string-array name="agps_network_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+<string-array name="wifi_WEP_index">
+        <item translatable="false">1</item>
+        <item translatable="false">2</item>
+        <item translatable="false">3</item>
+        <item translatable="false">4</item>
+    </string-array>
+<string-array name="entries_keyboard_lights">
+        <item>Biasanya hidup</item>
+        <item>Selama 3 saat</item>
+    </string-array>
+<string-array name="entries_smart_rotation_nocamera">
+        
+        
+        
+    <item>Putaran gerak isyarat</item>
+        <item>Putaran auto</item>
+        <item>Mati</item>
+    </string-array>
+<string-array name="wifi_sleep_policy_entries_smart">
+        
+        
+        
+        
+    <item>"Sentiasa"</item>
+        <item>"Hanya semasa dicas"</item>
+        <item>"Jangan (meningkatkan penggunaan data)"</item>
+        <item>"Tidur Pintar (pemindahan data dihidupkan/dimatikan berdasarkan pada penggunaannya)"</item>
+    </string-array>
+<string-array name="app_ops_summaries">
+        <item>lokasi anggaran</item>
+        <item>lokasi terperinci</item>
+        <item>GPS</item>
+        <item>bergetar</item>
+        <item>baca kenalan</item>
+        <item>ubah suai kenalan</item>
+        <item>baca log panggilan</item>
+        <item>ubah suai log panggilan</item>
+        <item>baca kalendar</item>
+        <item>ubah suai kalendar</item>
+        <item>Imbas WLAN</item>
+        <item>pemberitahuan</item>
+        <item>imbasan sel</item>
+        <item>hubungi telefon</item>
+        <item>baca SMS</item>
+        <item>tulis SMS</item>
+        <item>terima SMS</item>
+        <item>terima SMS kecemasan</item>
+        <item>terima MMS</item>
+        <item>terima WAP push</item>
+        <item>hantar SMS</item>
+        <item>baca ICC SMS</item>
+        <item>tulis ICC SMS</item>
+        <item>ubah suai seting</item>
+        <item>lukis di atas</item>
+        <item>pemberitahuan akses</item>
+        <item>kamera</item>
+        <item>rekod audio</item>
+        <item>mainkan audio</item>
+        <item>baca papan klip</item>
+        <item>ubah suai papan klip</item>
+        <item>bebutang media</item>
+        <item>fokus audio</item>
+        <item>volum utama</item>
+        <item>volum suara</item>
+        <item>volum deringan</item>
+        <item>volum media</item>
+        <item>volum penggera</item>
+        <item>volum pemberitahuan</item>
+        <item>volum bluetooth</item>
+        <item>terus sedar</item>
+        <item>pantau lokasi</item>
+        <item>pantau lokasi kuasa tinggi</item>
+        <item>dapatkan stat. penggunaan</item>
+        <item>bisukan/nyahbisu mikrofon</item>
+        <item>media projek</item>
+        <item>aktifkan VPN</item>
+    </string-array>
+<string-array name="captioning_edge_type_selector_titles">
+        <item>Lalai</item>
+        <item>Tiada</item>
+        <item>Rangka</item>
+        <item>Imej bayang</item>
+        <item>Dinaikkan</item>
+        <item>Diturunkan</item>
+    </string-array>
+<string-array name="track_frame_time_entries">
+        <item>Mati</item>
+        <item>Pada skrin sebagai bar</item>
+        <item>In adb shell dumpsys gfxinfo</item>
+    </string-array>
+<string-array name="app_ops_labels">
+        <item>Lokasi</item>
+        <item>Lokasi</item>
+        <item>Lokasi</item>
+        <item>Bergetar</item>
+        <item>Baca kenalan</item>
+        <item>Ubah suai kenalan</item>
+        <item>Baca log panggilan</item>
+        <item>Ubah suai log panggilan</item>
+        <item>Baca kalendar</item>
+        <item>Ubah suai kalendar</item>
+        <item>Lokasi</item>
+        <item>Kirim pemberitahuan</item>
+        <item>Lokasi</item>
+        <item>Hubungi telefon</item>
+        <item>Baca SMS/MMS</item>
+        <item>Tulis SMS/MMS</item>
+        <item>Terima SMS/MMS</item>
+        <item>Terima SMS/MMS</item>
+        <item>Terima SMS/MMS</item>
+        <item>Terima SMS/MMS</item>
+        <item>Hantar SMS/MMS</item>
+        <item>Baca SMS/MMS</item>
+        <item>Tulis SMS/MMS</item>
+        <item>Ubah suai seting</item>
+        <item>Lukis di atas</item>
+        <item>Pemberitahuan akses</item>
+        <item>Kamera</item>
+        <item>Rekod audio</item>
+        <item>Mainkan audio</item>
+        <item>Baca papan klip</item>
+        <item>Ubah suai papan klip</item>
+        <item>Bebutang media</item>
+        <item>Fokus audio</item>
+        <item>Volum utama</item>
+        <item>Volum suara</item>
+        <item>Volum deringan</item>
+        <item>Volum media</item>
+        <item>Volum penggera</item>
+        <item>Volum pemberitahuan</item>
+        <item>Volum bluetooth</item>
+        <item>Terus sedar</item>
+        <item>Lokasi</item>
+        <item>Lokasi</item>
+        <item>Dapatkan stat. penggunaan</item>
+        <item>Bisukan/nyahbisu mikrofon</item>
+        <item>Media projek</item>
+        <item>Aktifkan VPN</item>
+    </string-array>
+<string-array name="captioning_typeface_selector_titles">
+        <item>Lalai</item>
+        <item>Sans-serif</item>
+        <item>Sans-serif condensed</item>
+        <item>Sans-serif monospace</item>
+        <item>Serif</item>
+        <item>Serif monospace</item>
+        <item>Kasual</item>
+        <item>Tulisan sambung</item>
+        <item>Huruf kecil</item>
+    </string-array>
+<string-array name="captioning_preset_selector_titles">
+        <item>Gunakan apl lalai</item>
+        <item>Putih pada hitam</item>
+        <item>Hitam pada putih</item>
+        <item>Kuning pada hitam</item>
+        <item>Kuning pada biru</item>
+        <item>Tersuai</item>
+    </string-array>
+<string-array name="entries_button_brightness_k7">
+        <item>Hidup</item>
+        <item>Untuk 3 saat</item>
+        <item>Mati</item>
+    </string-array>
+
+
+
+
+
+
+<string-array name="color_picker">
+    <item msgid="7631642672260600032">"Hijau kebiruan"</item>
+    <item msgid="8332294763632946560">"Biru"</item>
+    <item msgid="2023216417616991392">"Biru nila"</item>
+    <item msgid="3170497246594232819">"Ungu"</item>
+    <item msgid="4608643045752965568">"Merah jambu"</item>
+    <item msgid="6131821495505931173">"Merah"</item>
+  </string-array>
+<string-array name="usb_configuration_titles">
+        <item>MTP (Protokol Pemindahan Media)</item>
+        <item>PTP (Protokol Pemindahan Gambar)</item>
+        <item>RNDIS (Ethernet USB)</item>
+        <item>Sumber Audio</item>
+        <item>MIDI</item>
+    </string-array>
+</resources>

@@ -1,8 +1,13 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
+import os
 import sqlite3
 
 def create(sqlite3Name):
+	#os.path.isfile('test.txt') #如果不存在就返回False 
+	#os.path.exists(directory) #如果目录不存在就返回False
+	if os.path.isfile(sqlite3Name):
+		os.remove(sqlite3Name)
 	# 连接到SQLite数据库
 	# 数据库文件是test.db
 	# 如果文件不存在，会自动在当前目录创建:
@@ -26,6 +31,8 @@ def insert(sqlite3Name):
 	cursor.execute('insert into myTable (id, name) values ("1", "Mike")')
 	cursor.execute('insert into myTable (id, name) values ("2", "Smith")')
 	cursor.execute('insert into myTable (id, name) values ("3", "Brown")')
+	cursor.execute('insert into myTable values(?, ?)', ("4", "Rose"))
+	cursor.execute('insert or replace into myTable values(?, ?)', ("4", "Rose1"))
 	# 通过rowcount获得插入的行数:
 	print "cursor.rowcount:",cursor.rowcount
 	cursor.close()
@@ -69,8 +76,8 @@ def delete(sqlite3Name):
 
 if __name__ == '__main__':
 	sqlite3Name='sqlite3Test.db'
-	#create(sqlite3Name)
-	#insert(sqlite3Name)
-	#query(sqlite3Name)
-	#modify(sqlite3Name)
+	create(sqlite3Name)
+	insert(sqlite3Name)
+	query(sqlite3Name)
+	modify(sqlite3Name)
 	delete(sqlite3Name)

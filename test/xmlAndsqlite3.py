@@ -6,6 +6,9 @@ import tempfile
 import shutil
 from lxml import etree
 import re
+import sqlite3
+import sqlite3Test
+
 # 将正则表达式编译成Pattern对象	
 pattern_string_s = re.compile('<string.*?>')#匹配<string name=""...>内容
 pattern_string_e = re.compile('</string.*>')#匹配</string>
@@ -28,15 +31,22 @@ def node_text(node):
 	return eleNodeName.strip()#移除字符串头尾指定的字符(默认为空格)
 
 def parseXmlAndSave(fileName):
+	sqlite3Name='sqlite3Xml.db'
+	sqlite3Test.create(sqlite3Name)
+	conn = sqlite3.connect(sqlite3Name)
+	cursor = conn.cursor()
 	tree = etree.parse(fileName)#将xml解析为树结构
 	root = tree.getroot()#获得该树的树根 
 	elements_root = root.findall("string")
 	for s in elements_root:
 		item_name = s.attrib.get("name")#或者s.get("name")
 		item_text = node_text(s)
-		print item_text
-		#print item_name
-		#print item_text
+		print item_name,":",item_text
+		cursor.execute('insert or replace into myTable values(?, ?)', (item_name, item_text))
+	cursor.close()
+	# 提交事务:
+	conn.commit()
+	conn.close()		
 
 if __name__ == '__main__':
 	fileName="E:/Bat_shell/Python/translation_mini/Settings/res/values/strings.xml"

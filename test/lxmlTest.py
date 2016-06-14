@@ -55,5 +55,5 @@ if __name__ == "__main__":
     fileName=os.getcwd()+os.sep+"data.xml"
     #fileName=os.path.join(os.getcwd(),"data.xml")
     #fileName='E:/Bat_shell/Python/test/data.xml'#Windows或者Linux环境下，使用“/”作为目录分隔符最保险
-    #parse_xml(fileName)
-    parse_xml2(fileName)
+    parse_xml(fileName)
+    #parse_xml2(fileName)

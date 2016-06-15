@@ -9,6 +9,7 @@ import re
 import sqlite3
 import sqlite3Test
 
+tableName=sqlite3Test.getTableName()
 # 将正则表达式编译成Pattern对象	
 pattern_string_s = re.compile('<string.*?>')#匹配<string name=""...>内容
 pattern_string_e = re.compile('</string.*>')#匹配</string>
@@ -42,7 +43,8 @@ def parseXmlAndSave(fileName):
 		item_name = s.attrib.get("name")#或者s.get("name")
 		item_text = node_text(s)
 		print item_name,":",item_text
-		cursor.execute('insert or replace into myTable values(?, ?)', (item_name, item_text))
+		cursor.execute('insert or replace into %s values(?, ?)'%tableName, (item_name, item_text))
+		#cursor.execute('update %s set name=? where id=?'%tableName,(item_text,item_name))
 	cursor.close()
 	# 提交事务:
 	conn.commit()

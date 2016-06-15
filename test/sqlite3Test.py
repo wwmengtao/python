@@ -4,6 +4,9 @@ import os
 import sqlite3
 tableName='M_T'
 
+def getTableName():
+	return tableName
+
 def create(sqlite3Name):
 	#os.path.isfile('test.txt') #如果不存在就返回False 
 	#os.path.exists(directory) #如果目录不存在就返回False
@@ -17,7 +20,7 @@ def create(sqlite3Name):
 	cursor = conn.cursor()
 	# 执行一条SQL语句，创建user表:
 	#cursor.execute('create table IF NOT EXISTS %s (id varchar(20) primary key, name varchar(20))')
-	cursor.execute('create table IF NOT EXISTS %s (id text, name text, PRIMARY KEY ( id, name) );'% tableName)
+	cursor.execute('create table IF NOT EXISTS %s (id text, name text, PRIMARY KEY (id,name) );'% tableName)
 	# 关闭Cursor:
 	cursor.close()
 	# 关闭Connection:
@@ -29,7 +32,9 @@ def insert(sqlite3Name):
 	cursor = conn.cursor()
 	# 继续执行一条SQL语句，插入一条记录:
 	cursor.execute('insert into %s values(?,?)'%tableName,("1", "Michael"))
-	cursor.execute('insert into %s (id, name) values(?,?)'%tableName,("1", "Mike"))
+	#如果主键设置为(id)而不是（id,name），那么下列语句必须加上“or replace”，否则会报错“sqlite3.IntegrityError: column id is not unique”
+	#cursor.execute('insert into %s (id, name) values(?,?)'%tableName,("1", "Mike"))
+	cursor.execute('insert or replace into %s (id, name) values(?,?)'%tableName,("1", "Mike"))
 	cursor.execute('insert into %s values ("2", "Smith")'%tableName)
 	cursor.execute('insert into %s (id, name) values ("3", "Brown")'%tableName)
 	cursor.execute('insert into %s values(?, ?)'%tableName, ("4", "Rose"))

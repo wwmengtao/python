@@ -1,6 +1,10 @@
-2020.06.12
-1. csdn_ori.py和csdn.py都是获取CSDN某一个作者博客的内容
-2. 区别在于：csdn_ori.py无法执行是因为除了文章标题列表和文章链接列表长度相同且不为空，其他的都为空；csdn.py仅仅保存文章标题和文章链接，其他的都不保存
+2020.06.14
+1. csdn.py:获取CSDN某一个作者博客的内容
+bug说明：由于获取博客文章信息的时候，文章类型(csdn_article_type_list)的长度和标题/链接长度会偶尔出现不一致，因此保存的时候文章类型统统为""
 
-2020.06.13
-1. xlrd.open_workbook(path)：如果path指定的文件不存在，则报错。
+2. opeExcel.py：Excel文件的创建及读写操作
+1)xlrd只能读excel表格，而xlwt只能用来创建文件并且写入内容
+2)test.xls：用来解析excel表格使用的测试文档
+
+3. opeHTML.py：用来解析HTML文件
+1)*.html：用来解析HTML文件所使用的测试文档

@@ -8,3 +8,5 @@ bug说明：由于获取博客文章信息的时候，文章类型(csdn_article_
 
 3. opeHTML.py：用来解析HTML文件
 1)*.html：用来解析HTML文件所使用的测试文档
+2)函数解析
+parseGityuanHTML：解析http://gityuan.com/archive/

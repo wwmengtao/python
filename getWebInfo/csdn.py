@@ -29,8 +29,13 @@ def getCSDNAuthorInfo():
 
     opeExcel.create_excel_sheet(file_name, author_name)
     opeExcel.write_excel_xls_append(file_name, author_name, headerData)
-    # 循环每页
-    allNumber = 0#文章总数
+    # 总体数组
+    title_sum = []
+    link_sum = []
+    publishDate_sum = []
+    type_sum = []
+    readerCount_sum = []
+    commentCount_sum = []
     for index in range(1, page_num + 1):
         # 拼接URL
         page_url = "https://blog.csdn.net/" + author_name + "/article/list/" + str(index)
@@ -38,8 +43,6 @@ def getCSDNAuthorInfo():
         # 博客文章的标题
         title_list = opeHTML.parseEtreeHTML(page_html, title_xpath)
         if len(title_list) == 0:
-          print(author_name + "文章获取完毕，共计文章数目:"+str(allNumber))
-          allNumber = 0
           break;
         # 博客文章的链接
         link_list = opeHTML.parseEtreeHTML(page_html, link_xpath)
@@ -50,12 +53,23 @@ def getCSDNAuthorInfo():
         # 博客文章的阅读数
         readerCount_list = opeHTML.parseEtreeHTML(page_html, readerCount_xpath)
         # 博客文章的评论数
-        commentCount_list = opeHTML.parseEtreeHTML(page_html, commentCount_xpath) 
-        #数据写入
-        opeExcel.write_excel_xls_append_all_2(file_name, author_name, 
-        type_list, title_list, link_list, publishDate_list, readerCount_list, commentCount_list)
-        allNumber = len(title_list) + allNumber
-    
+        commentCount_list = opeHTML.parseEtreeHTML(page_html, commentCount_xpath)
+        # 将所有内容存放到一个总的数组中
+        title_sum.extend(title_list)
+        link_sum.extend(link_list)
+        publishDate_sum.extend(publishDate_list)
+        type_sum.extend(type_list)
+        readerCount_sum.extend(readerCount_list)
+        commentCount_sum.extend(commentCount_list)
+        # #数据写入
+        # opeExcel.write_excel_xls_append_6(file_name, author_name, 
+        # type_list, title_list, link_list, publishDate_list, readerCount_list, commentCount_list)
+        # allNumber = len(title_list) + allNumber
+    if len(title_sum) > 0:
+      #数据写入
+      opeExcel.write_excel_xls_append_6(file_name, author_name, 
+        type_sum, title_sum, link_sum, publishDate_sum, readerCount_sum, commentCount_sum)
+      print(author_name + "文章获取完毕，共计文章数目:"+str(len(title_sum)))
 
 def main_func():
     getCSDNAuthorInfo()

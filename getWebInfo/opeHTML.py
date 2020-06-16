@@ -12,7 +12,8 @@ HEADER_REQUEST = {
 def getEtreeHTML(page_url):
   response = requests.get(page_url, headers=HEADER_REQUEST).content
   # 将HTML源码字符串转换尘土HTML对象
-  return etree.HTML(response)
+  etree_html = etree.HTML(response)
+  return etree_html
 
 def preHandleData(infoList):# 处理空格及换行问题
   postInfoList = []

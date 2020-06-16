@@ -34,15 +34,26 @@ def getCSDNAuthorInfo():
     for index in range(1, page_num + 1):
         # 拼接URL
         page_url = "https://blog.csdn.net/" + author_name + "/article/list/" + str(index)
-        pre_title_list = opeHTML.parseUrl(page_url, title_xpath)
-        if len(pre_title_list) == 0:
-            print(author_name + "文章获取完毕，共计文章数目:"+str(allNumber))
-            allNumber = 0
-            break;
-        type_list, title_list, link_list, publishDate_list, readerCount_list, commentCount_list = opeHTML.parseUrlCSDN(page_url, 
-          type_xpath, title_xpath, link_xpath, publishDate_xpath, readerCount_xpath, commentCount_xpath)
+        page_html = opeHTML.getEtreeHTML(page_url)
+        # 博客文章的标题
+        title_list = opeHTML.parseEtreeHTML(page_html, title_xpath)
+        if len(title_list) == 0:
+          print(author_name + "文章获取完毕，共计文章数目:"+str(allNumber))
+          allNumber = 0
+          break;
+        # 博客文章的链接
+        link_list = opeHTML.parseEtreeHTML(page_html, link_xpath)
+        # 博客文章的发布日期
+        publishDate_list = opeHTML.parseEtreeHTML(page_html, publishDate_xpath)
+        # 博客文章的类型
+        type_list = opeHTML.parseEtreeHTML(page_html, type_xpath)
+        # 博客文章的阅读数
+        readerCount_list = opeHTML.parseEtreeHTML(page_html, readerCount_xpath)
+        # 博客文章的评论数
+        commentCount_list = opeHTML.parseEtreeHTML(page_html, commentCount_xpath) 
+        #数据写入
         opeExcel.write_excel_xls_append_all_2(file_name, author_name, 
-          type_list, title_list, link_list, publishDate_list, readerCount_list, commentCount_list)
+        type_list, title_list, link_list, publishDate_list, readerCount_list, commentCount_list)
         allNumber = len(title_list) + allNumber
     
 

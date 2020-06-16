@@ -64,7 +64,20 @@ def write_excel_xls_append(path, sheetName, value):
     wb_xlwt.save(path)  # 保存工作簿
 
 #write_excel_xls_append_all是write_excel_xls_append的增强版，可以一次性写入多组数据
-def write_excel_xls_append_all(path, sheetName, title_list, link_list):
+def write_excel_xls_append_2(path, sheetName, list1, list2):
+    wb_xlrd = xlrd.open_workbook(path)  # 打开工作簿
+    st_xlrd = wb_xlrd.sheet_by_name(sheetName)  # 获取工作簿中名称为sheetName的表格
+    rows_rd = st_xlrd.nrows  # 获取表格中已存在的数据的行数
+    wb_xlwt = copy(wb_xlrd)  # 将xlrd对象拷贝转化为xlwt对象
+    sheetIndex = get_sheet_index(wb_xlrd, sheetName)
+    st_xlwt = wb_xlwt.get_sheet(sheetIndex)
+    for i in range(0, len(list1)): 
+      value = [[list1[i], list2[i],],]
+      write_sheet_value(st_xlwt, rows_rd, value)
+      rows_rd = rows_rd + 1
+    wb_xlwt.save(path)  # 保存工作簿
+
+def write_excel_xls_append_3(path, sheetName, title_list, link_list, date_list):
     wb_xlrd = xlrd.open_workbook(path)  # 打开工作簿
     st_xlrd = wb_xlrd.sheet_by_name(sheetName)  # 获取工作簿中名称为sheetName的表格
     rows_rd = st_xlrd.nrows  # 获取表格中已存在的数据的行数
@@ -72,12 +85,12 @@ def write_excel_xls_append_all(path, sheetName, title_list, link_list):
     sheetIndex = get_sheet_index(wb_xlrd, sheetName)
     st_xlwt = wb_xlwt.get_sheet(sheetIndex)
     for i in range(0, len(title_list)): 
-      value = [[title_list[i], link_list[i],],]
+      value = [[title_list[i], link_list[i], date_list[i],],]
       write_sheet_value(st_xlwt, rows_rd, value)
       rows_rd = rows_rd + 1
     wb_xlwt.save(path)  # 保存工作簿
 
-def write_excel_xls_append_all_2(path, sheetName, type_list, title_list, link_list, publishDate_list, readerCount_list, commentCount_list):
+def write_excel_xls_append_6(path, sheetName, type_list, title_list, link_list, publishDate_list, readerCount_list, commentCount_list):
     wb_xlrd = xlrd.open_workbook(path)  # 打开工作簿
     st_xlrd = wb_xlrd.sheet_by_name(sheetName)  # 获取工作簿中名称为sheetName的表格
     rows_rd = st_xlrd.nrows  # 获取表格中已存在的数据的行数

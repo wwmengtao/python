@@ -4,9 +4,15 @@ import requests
 import opeExcel
 from lxml import etree
 from lxml import html
+
 HEADER_REQUEST = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
 }
+
+def getEtreeHTML(page_url):
+  response = requests.get(page_url, headers=HEADER_REQUEST).content
+  # 将HTML源码字符串转换尘土HTML对象
+  return etree.HTML(response)
 
 def preHandleData(infoList):# 处理空格及换行问题
   postInfoList = []
@@ -16,59 +22,13 @@ def preHandleData(infoList):# 处理空格及换行问题
     postInfoList.remove("")
   return postInfoList
 
-def parseXpath(page_html, theXpath):
-  infoList = page_html.xpath(theXpath)
-  return preHandleData(infoList)
-
-def parseUrl(page_url, theXpath):
-  response = requests.get(page_url, headers=HEADER_REQUEST).content
-  # 将HTML源码字符串转换尘土HTML对象
-  page_html = etree.HTML(response)
+def parseEtreeHTML(etree_html, theXpath):
   #解析出信息列表
-  infoList = parseXpath(page_html, theXpath)
-  for i in range(0, len(infoList)):
-    print("parseUrl："+infoList[i])
+  infoList = etree_html.xpath(theXpath)
+  infoList = preHandleData(infoList)
+  # for i in range(0, len(infoList)):
+  #   print("parseEtreeHTML："+infoList[i])
   return infoList
-
-def parseUrl_2(page_url, title_xpath, link_xpath):
-  response = requests.get(page_url, headers=HEADER_REQUEST).content
-  # 将HTML源码字符串转换尘土HTML对象
-  page_html = etree.HTML(response)
-  # 博客文章的标题
-  title_list = parseXpath(page_html, title_xpath)
-  # 博客文章的链接
-  link_list = parseXpath(page_html, link_xpath)
-  # print("csdn_article_title_list: " + str(len(csdn_article_title_list)))
-  # print("csdn_article_link_list: " + str(len(csdn_article_link_list)))
-  for i in range(0, len(title_list)):
-    print("标题："+title_list[i])
-    print("链接："+link_list[i])    
-  return title_list, link_list
-
-def parseUrlCSDN(page_url, type_xpath, title_xpath, link_xpath, publishDate_xpath, readerCount_xpath, commentCount_xpath):
-  response = requests.get(page_url, headers=HEADER_REQUEST).content
-  # 将HTML源码字符串转换尘土HTML对象
-  page_html = etree.HTML(response)
-  # 博客文章的标题
-  title_list = parseXpath(page_html, title_xpath)
-  # 博客文章的链接
-  link_list = parseXpath(page_html, link_xpath)
-  # 博客文章的发布日期
-  publishDate_list = parseXpath(page_html, publishDate_xpath)
-  # 博客文章的类型
-  type_list = parseXpath(page_html, type_xpath)
-  # 博客文章的阅读数
-  readerCount_list = parseXpath(page_html, readerCount_xpath)
-  # 博客文章的评论数
-  commentCount_list = parseXpath(page_html, commentCount_xpath) 
-  for i in range(0, len(title_list)):
-    # print("类型："+type_list[i])    
-    print("标题："+title_list[i])
-    print("链接："+link_list[i])
-    print("发布："+publishDate_list[i])
-    print("阅读："+readerCount_list[i])
-    print("评论："+commentCount_list[i]) 
-  return type_list, title_list, link_list, publishDate_list, readerCount_list, commentCount_list
 
 def parseCSDNHTML():
   page_url = "https://blog.csdn.net/innost/article/list/1"
@@ -79,8 +39,20 @@ def parseCSDNHTML():
   type_xpath = "//div[@class='article-item-box csdn-tracking-statistics']/h4/a/span/text()"
   readerCount_xpath = "//div[@class='info-box d-flex align-content-center']/p//span[last()-1][@class='read-num']/text()"
   commentCount_xpath = "//div[@class='info-box d-flex align-content-center']/p//span[last()][@class='read-num']/text()"
-  type_list, title_list, link_list, publishDate_list, readerCount_list, commentCount_list = parseUrlCSDN(page_url, 
-    type_xpath, title_xpath, link_xpath, publishDate_xpath, readerCount_xpath, commentCount_xpath)
+  #将HTML源码字符串转换尘土HTML对象
+  page_html = getEtreeHTML(page_url)
+  # 博客文章的标题
+  title_list = parseEtreeHTML(page_html, title_xpath)
+  # 博客文章的链接
+  link_list = parseEtreeHTML(page_html, link_xpath)
+  # 博客文章的发布日期
+  publishDate_list = parseEtreeHTML(page_html, publishDate_xpath)
+  # 博客文章的类型
+  type_list = parseEtreeHTML(page_html, type_xpath)
+  # 博客文章的阅读数
+  readerCount_list = parseEtreeHTML(page_html, readerCount_xpath)
+  # 博客文章的评论数
+  commentCount_list = parseEtreeHTML(page_html, commentCount_xpath) 
   
   print("title_list: " + str(len(title_list)))
   print("link_list: " + str(len(link_list)))
@@ -89,6 +61,7 @@ def parseCSDNHTML():
   print("readerCount_list: " + str(len(readerCount_list)))
   print("commentCount_list: " + str(len(commentCount_list)))
 
+#parseTestHTML：解析本地html文档
 def parseTestHTML():
   #文章链接：https://www.jianshu.com/p/1575db75670f
   filename = os.getcwd()+"\\test.html"
@@ -113,6 +86,7 @@ def parseTestHTML():
   print(tree.xpath('//div[@id="testid"]/attribute::*')) #定位当前节点的所有属性
   #>>['testid', 'first']
 
+#parseCSDNTestHTML：解析本地从CSDN博客中截取的部分html文档
 def parseCSDNTestHTML():
   filename = os.getcwd()+"\\csdn_test.html"
   fp = open(filename, 'rb')
@@ -141,13 +115,17 @@ def parseGityuanHTML():#http://gityuan.com/archive/
   headerData = [["文章标题", "文章链接",], ]
   opeExcel.create_excel_sheet(file_name, author_name)
   opeExcel.write_excel_xls_append(file_name, author_name, headerData)
-  #解析url中的标题和链接
-  title_list, link_list = parseUrl_2(page_url, title_xpath, link_xpath)  
+  #将HTML源码字符串转换尘土HTML对象
+  page_html = getEtreeHTML(page_url)
+  # 博客文章的标题
+  title_list = parseEtreeHTML(page_html, title_xpath)
+  # 博客文章的链接
+  link_list = parseEtreeHTML(page_html, link_xpath)  
   #Gityuan的网站返回的都是不带"http://gityuan.com"的链接信息
   for i in range(0, len(link_list)):
     link_list[i] = "http://gityuan.com" + link_list[i]
   # 将数据保存到excel表格中
-  opeExcel.write_excel_xls_append_all(file_name, author_name, title_list, link_list)
+  opeExcel.write_excel_xls_append_2(file_name, author_name, title_list, link_list)
 #解析特定URL网页标题和链接信息并返回
 
 
@@ -163,14 +141,50 @@ def parseLightMoon():#http://light3moon.com/1986/12/20/%E6%96%87%E7%AB%A0%E7%B4%
   headerData = [["文章标题", "文章链接",], ]
   opeExcel.create_excel_sheet(file_name, author_name)
   opeExcel.write_excel_xls_append(file_name, author_name, headerData)
-  #解析url中的标题和链接
-  title_list, link_list = parseUrl_2(page_url, title_xpath, link_xpath)   
+  #将HTML源码字符串转换尘土HTML对象
+  page_html = getEtreeHTML(page_url)
+  # 博客文章的标题
+  title_list = parseEtreeHTML(page_html, title_xpath)
+  # 博客文章的链接
+  link_list = parseEtreeHTML(page_html, link_xpath)    
   # 将数据保存到excel表格中
-  opeExcel.write_excel_xls_append_all(file_name, author_name, title_list, link_list)
+  opeExcel.write_excel_xls_append_2(file_name, author_name, title_list, link_list)
 
+def getCnblogsInfo():#https://www.cnblogs.com/Jax/default.html?page=1
+    title_xpath = "//a[@class='postTitle2 vertical-middle']/span/text()"
+    link_xpath = "//a[@class='postTitle2 vertical-middle']/@href"
+    date_xpath = "//div[@class='dayTitle']/a/text()"
+    # 写入Excel文件的表头数据，即第一行数据
+    headerData = [["文章标题", "文章链接", "发布日期",], ]    
+    # 博主名字
+    author_name = "baojianqiang"
+    # 博主博文页数
+    page_num = 999999
+    # page_num = int(input("请输入博客页数: "))
+    # Excel文件名称
+    file_name = os.getcwd()+"\cnblogs_articles.xls"
 
+    opeExcel.create_excel_sheet(file_name, author_name)
+    opeExcel.write_excel_xls_append(file_name, author_name, headerData)
+    # 循环每页
+    allNumber = 0#文章总数
+    for index in range(1, page_num + 1):
+        # 拼接URL
+        page_url = "https://www.cnblogs.com/Jax/default.html?page=" + str(index)
+        page_html = getEtreeHTML(page_url)
+        title_list = parseEtreeHTML(page_html, title_xpath)
+        if len(title_list) == 0:
+            print(author_name + "文章获取完毕，共计文章数目:"+str(allNumber))
+            allNumber = 0
+            break;
+        link_list = parseEtreeHTML(page_html, link_xpath)
+        date_list = parseEtreeHTML(page_html, date_xpath)#该博客中日期数目少于标题数目，因此只保存文章标题和链接
+        print("title_list: " + str(len(title_list)))
+        print("date_list: " + str(len(date_list)))
+        opeExcel.write_excel_xls_append_2(file_name, author_name, title_list, link_list)
+        allNumber = len(title_list) + allNumber
 def main_func():
-  parseCSDNHTML()
+  getCnblogsInfo()
 
 if __name__ == '__main__':
   main_func()

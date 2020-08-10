@@ -97,6 +97,12 @@ def write_excel_xls_append_6(path, sheetName, type_list, title_list, link_list, 
     wb_xlwt = copy(wb_xlrd)  # 将xlrd对象拷贝转化为xlwt对象
     sheetIndex = get_sheet_index(wb_xlrd, sheetName)
     st_xlwt = wb_xlwt.get_sheet(sheetIndex)
+    print("/------print size------/")
+    print("title_list: " + str(len(title_list)))
+    print("link_list: " + str(len(link_list)))
+    print("publishDate_list: " + str(len(publishDate_list)))
+    print("readerCount_list: " + str(len(readerCount_list)))
+    print("commentCount_list: " + str(len(commentCount_list)))
     for i in range(0, len(title_list)): 
       value = [["", title_list[i], link_list[i], publishDate_list[i], readerCount_list[i], commentCount_list[i],],]
       write_sheet_value(st_xlwt, rows_rd, value)

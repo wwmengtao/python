@@ -184,8 +184,42 @@ def getCnblogsInfo():#https://www.cnblogs.com/Jax/default.html?page=1
         print("date_list: " + str(len(date_list)))
         opeExcel.write_excel_xls_append_2(file_name, author_name, title_list, link_list)
         allNumber = len(title_list) + allNumber
+
+def visitList(list):
+  if len(list) < 0 or len(list) == 0:
+    print("list is empty")
+    return
+  for i in range(0, len(list)):
+    print("visitList: " + list[i])
+
+def parseJuejinInfo():#https://juejin.im/tag/%E6%8E%98%E9%87%91%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92
+  #网页信息
+  page_url = "https://juejin.im/tag/%E6%8E%98%E9%87%91%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92"
+  title_xpath = "//div[@class='info-row title-row']/a/text()"
+  link_xpath = "//div[@class='info-row title-row']/a/@href"
+  #Excel文件名称
+  file_name = os.getcwd()+"\Juejin_articles.xls"
+  author_name = "Juejin"
+  # 写入表头数据
+  headerData = [["文章标题", "文章链接",], ]
+  opeExcel.create_excel_sheet(file_name, author_name)
+  opeExcel.write_excel_xls_append(file_name, author_name, headerData)
+  #将HTML源码字符串转换尘土HTML对象
+  page_html = getEtreeHTML(page_url)
+  # 博客文章的标题
+  title_list = parseEtreeHTML(page_html, title_xpath)
+  # 博客文章的链接
+  link_list = parseEtreeHTML(page_html, link_xpath)    
+  print("" + str(len(title_list)))
+  print("" + str(len(link_list)))
+  visitList(title_list)
+
+  # 将数据保存到excel表格中
+  opeExcel.write_excel_xls_append_2(file_name, author_name, title_list, link_list)
+
+
 def main_func():
-  getCnblogsInfo()
+  parseJuejinInfo()
 
 if __name__ == '__main__':
   main_func()
